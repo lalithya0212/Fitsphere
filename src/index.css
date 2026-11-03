@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 16 185 129;
+    --navy: 15 23 42;
+    --sports-blue: 37 99 235;
+    --gold: 245 158 11;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased overflow-x-hidden;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-md border border-slate-200/80 shadow-sm transition-all duration-200;
+  }
+
+  .glass-card-hover {
+    @apply hover:shadow-lg hover:border-emerald-300/80 hover:-translate-y-0.5 transition-all duration-200;
+  }
+
+  .glass-dark {
+    @apply bg-slate-900/90 backdrop-blur-md border border-slate-800 text-white shadow-xl;
+  }
+
+  .glass-pill {
+    @apply bg-white/70 backdrop-blur-md border border-slate-200/60 shadow-xs;
+  }
+
+  .badge-emerald {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200;
+  }
+
+  .badge-gold {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200;
+  }
+
+  .badge-blue {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200;
+  }
+
+  .badge-purple {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-200;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-white bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] shadow-md shadow-emerald-600/20 transition-all duration-150;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200/80 active:scale-[0.98] shadow-xs transition-all duration-150;
+  }
+
+  .btn-navy {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-white bg-slate-900 hover:bg-slate-800 active:scale-[0.98] shadow-md shadow-slate-900/20 transition-all duration-150;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-slate-950 bg-amber-400 hover:bg-amber-300 active:scale-[0.98] shadow-md shadow-amber-400/20 transition-all duration-150;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
